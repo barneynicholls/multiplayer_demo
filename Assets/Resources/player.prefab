@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 7580701586561519328}
   - component: {fileID: 7580701586561519331}
   - component: {fileID: 7580701586561519330}
+  - component: {fileID: 6843200220209783952}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -212,6 +213,20 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &6843200220209783952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580701586561519332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb361f0b3cae96b4b993e346af28f9a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  player: {fileID: 7580701586965949527}
 --- !u!1 &7580701586710539685
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +331,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7580701586965949527}
-  - component: {fileID: 7580701586965949526}
+  - component: {fileID: 1560386391580083371}
+  - component: {fileID: 2246965226319111666}
   - component: {fileID: 9098780551819538465}
   - component: {fileID: 7060373001253308081}
   m_Layer: 0
@@ -342,7 +358,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7580701586965949526
+--- !u!143 &1560386391580083371
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580701586965949513}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2246965226319111666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,38 +385,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7580701586965949513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be76e5f14cfee674cb30b491fb72b09b, type: 3}
+  m_Script: {fileID: 11500000, guid: 069d6a987d66cf9499666aa10d49812c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 7580701586561519328}
-  boost: 3.5
-  positionLerpTime: 0.2
-  mouseSensitivityCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.5
-      inSlope: 0
-      outSlope: 5
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 2.5
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  rotationLerpTime: 0.01
-  invertY: 0
+  speed: 12
 --- !u!114 &9098780551819538465
 MonoBehaviour:
   m_ObjectHideFlags: 0
